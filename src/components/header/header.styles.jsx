@@ -15,6 +15,17 @@ export const LogoContainer = styled(Link)`
   width: 70px;
   padding: 25px;
 `;
+export const LogoNameContainer = styled.div`
+  font-family: "Shojumaru", cursive;
+  font-weight: bold;
+  margin: -35px;
+  padding: 16px;
+  font-size: medium;
+  padding-top: unset;
+  margin-bottom: 5px;
+  color: black;
+`;
+
 
 export const OptionsContainer = styled.div`
   width: 50%;
