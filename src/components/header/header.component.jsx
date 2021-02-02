@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { connect } from 'react-redux';
 import { auth } from '../../firebase/firebase.utils'
+
+import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import { OptionsContainer, HeaderContainer, LogoContainer,LogoNameContainer, OptionLink} from './header.styles'
 
@@ -27,4 +29,8 @@ const Header = ({ currentUser }) => (
   </HeaderContainer>
 );
 
-export default Header;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header);
